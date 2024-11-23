@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "HrczZ2TY/UhWong0AK/vGiDZwBbE94F3nhLkhUvk9EE=",
+  "Source": "PostaAPI",
+  "BasePath": "_content/PostaAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "PostaAPI\\wwwroot",
+      "Source": "PostaAPI",
+      "ContentRoot": "C:\\Users\\kledi\\OneDrive\\Desktop\\postaapi\\PostaAPI\\PostaAPI\\wwwroot\\",
+      "BasePath": "_content/PostaAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
