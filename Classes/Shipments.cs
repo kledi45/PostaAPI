@@ -15,6 +15,9 @@ namespace PostaAPI.Classes
         public decimal ProductPrice { get; set; }
         public decimal ServiceCost { get; set; }
         public decimal Total { get; set; }
+        public string? Address { get; set; }
+        public string? UniqueIdentifier { get; set; }
+        public int? IdStatus { get; set; }
 
         [ForeignKey("IDUser")]
         public virtual Users? IdUserNavigation { get; set; }
@@ -22,5 +25,8 @@ namespace PostaAPI.Classes
         public virtual Countries? IdCountryNavigation { get; set; }
         [ForeignKey("IDCity")]
         public virtual Cities? IdCityNavigation { get; set; }
+        [ForeignKey("IdStatus")]
+        public virtual Statuses? IdStatusNavigation { get; set; }
+
     }
 }

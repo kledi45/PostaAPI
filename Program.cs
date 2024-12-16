@@ -26,6 +26,8 @@ builder.Services.AddScoped<ICountriesService, CountriesService>();
 builder.Services.AddScoped<IRolesService, RolesService>();
 builder.Services.AddScoped<ICitiesService, CitiesService>();
 builder.Services.AddScoped<IShipmentsService, ShipmentsService>();
+builder.Services.AddScoped<IStatusesService, StatusesService>();
+
 
 
 

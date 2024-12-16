@@ -72,6 +72,8 @@ namespace PostaAPI.Services
             {
                 var shipment = new Shipments();
                 _mapper.Map(createShipment, shipment);
+                shipment.UniqueIdentifier = GetUniqueIdentifier();
+                shipment.IdStatus = (int)StatusesEnum.Registered;
                 var loggedUser = _loggedUserHelper.GetUserLoggedIn();
                 EntityHelper.SetEntryData(shipment, loggedUser.Id, loggedUser.UserName);
                 var shipmentCreated = _shipmentsRepository.AddAndGetEntity(shipment);
@@ -95,5 +97,21 @@ namespace PostaAPI.Services
                 return new ApiResponse<IEnumerable<ShipmentsListDTO>>((int)PublicResultStatusCodes.InternalServerError);
             }
         }
+
+        private string GetUniqueIdentifier()
+        {
+            Random random = new Random();
+
+            string letters = new string(Enumerable.Range(0, 5)
+                .Select(_ => (char)('A' + random.Next(26)))
+                .ToArray());
+
+            string numbers = new string(Enumerable.Range(0, 4)
+                .Select(_ => (char)('0' + random.Next(10)))
+                .ToArray());
+
+            return letters + numbers;
+        }
+
     }
 }

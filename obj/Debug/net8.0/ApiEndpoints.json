@@ -263,6 +263,64 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PostaAPI.Controllers.StatusesController",
+    "Method": "CreateStatus",
+    "RelativePath": "api/Statuses/CreateStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createStatusDTO",
+        "Type": "PostaAPI.DTOs.Statuses.CreateStatusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.StatusesController",
+    "Method": "DeleteStatus",
+    "RelativePath": "api/Statuses/DeleteStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDTO",
+        "Type": "PostaAPI.DTOs.DeleteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.StatusesController",
+    "Method": "EditStatus",
+    "RelativePath": "api/Statuses/EditStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editStatusDTO",
+        "Type": "PostaAPI.DTOs.Statuses.EditStatusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.StatusesController",
+    "Method": "GetStatuses",
+    "RelativePath": "api/Statuses/GetStatuses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PostaAPI.Controllers.UsersController",
     "Method": "CreateUser",
     "RelativePath": "api/Users/CreateUser",

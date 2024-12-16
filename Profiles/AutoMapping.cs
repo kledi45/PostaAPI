@@ -4,6 +4,7 @@ using PostaAPI.DTOs.Cities;
 using PostaAPI.DTOs.Countries;
 using PostaAPI.DTOs.Roles;
 using PostaAPI.DTOs.Shipments;
+using PostaAPI.DTOs.Statuses;
 using PostaAPI.DTOs.Users;
 
 namespace PostaAPI.Profiles
@@ -48,7 +49,15 @@ namespace PostaAPI.Profiles
             CreateMap<ShipmentsListDTO, Shipments>().ReverseMap()
                 .ForMember(x => x.City, opt => opt.MapFrom(x => x.IdCityNavigation.Name))
                 .ForMember(x => x.Country, opt => opt.MapFrom(x => x.IdCountryNavigation.Name))
-                .ForMember(x => x.Client, opt => opt.MapFrom(x => x.IdUserNavigation.FirstName + " " + x.IdUserNavigation.LastName));
+                .ForMember(x => x.Client, opt => opt.MapFrom(x => x.IdUserNavigation.FirstName + " " + x.IdUserNavigation.LastName))
+                .ForMember(x => x.Status, opt => opt.MapFrom(x => x.IdStatusNavigation.Name));
+            #endregion
+
+
+            #region statuses profile mapper
+            CreateMap<CreateStatusDTO, Statuses>().ReverseMap();
+            CreateMap<EditStatusDTO, Statuses>().ReverseMap();
+            CreateMap<StatusesListDTO, Statuses>().ReverseMap();
             #endregion
         }
     }
