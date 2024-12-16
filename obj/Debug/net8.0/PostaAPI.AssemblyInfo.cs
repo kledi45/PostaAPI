@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PostaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96d2146007a5a5b747b0ad1483abda181b7515c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PostaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PostaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

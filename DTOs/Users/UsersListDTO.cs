@@ -22,5 +22,10 @@ namespace PostaAPI.DTOs.Users
         public string? ProfileImagePath { get; set; }
         public int IdRole { get; set; }
         public string? Role { get; set; }
+        public int Prefix { get; set; }
+        public long PhoneNumber { get; set; }
+        public int IdCountry { get; set; }
+        public string? Country { get; set; }
+        public string? FullName => FirstName + " " + LastName;
     }
 }

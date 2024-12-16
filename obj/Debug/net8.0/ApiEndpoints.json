@@ -1,5 +1,121 @@
 [
   {
+    "ContainingType": "PostaAPI.Controllers.CitiesController",
+    "Method": "CreateCity",
+    "RelativePath": "api/Cities/CreateCity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCity",
+        "Type": "PostaAPI.DTOs.Cities.CreateCityDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.CitiesController",
+    "Method": "DeleteCity",
+    "RelativePath": "api/Cities/DeleteCity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDTO",
+        "Type": "PostaAPI.DTOs.DeleteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.CitiesController",
+    "Method": "EditCity",
+    "RelativePath": "api/Cities/EditCity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editCity",
+        "Type": "PostaAPI.DTOs.Cities.EditCityDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.CitiesController",
+    "Method": "GetCities",
+    "RelativePath": "api/Cities/GetCities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.CountriesController",
+    "Method": "CreateCountry",
+    "RelativePath": "api/Countries/CreateCountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCountry",
+        "Type": "PostaAPI.DTOs.Countries.CreateCountryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.CountriesController",
+    "Method": "DeleteCountry",
+    "RelativePath": "api/Countries/DeleteCountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDTO",
+        "Type": "PostaAPI.DTOs.DeleteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.CountriesController",
+    "Method": "EditCountry",
+    "RelativePath": "api/Countries/EditCountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editCountry",
+        "Type": "PostaAPI.DTOs.Countries.EditCountryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.CountriesController",
+    "Method": "GetCountries",
+    "RelativePath": "api/Countries/GetCountries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PostaAPI.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/Login",
@@ -37,6 +153,116 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PostaAPI.Controllers.RolesController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Roles/CreateRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRoleDTO",
+        "Type": "PostaAPI.DTOs.Roles.CreateRoleDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.RolesController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Roles/DeleteRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteDTO",
+        "Type": "PostaAPI.DTOs.DeleteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.RolesController",
+    "Method": "EditRole",
+    "RelativePath": "api/Roles/EditRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editRole",
+        "Type": "PostaAPI.DTOs.Roles.EditRoleDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.RolesController",
+    "Method": "GetRoles",
+    "RelativePath": "api/Roles/GetRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.ShipmentsController",
+    "Method": "CreateShipment",
+    "RelativePath": "api/Shipments/CreateShipment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "shipmentDTO",
+        "Type": "PostaAPI.DTOs.Shipments.CreateShipmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.ShipmentsController",
+    "Method": "GetCitiesByCountry",
+    "RelativePath": "api/Shipments/GetCitiesByCountry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCountry",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.ShipmentsController",
+    "Method": "GetClients",
+    "RelativePath": "api/Shipments/GetClients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostaAPI.Controllers.ShipmentsController",
+    "Method": "GetShipments",
+    "RelativePath": "api/Shipments/GetShipments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PostaAPI.Controllers.UsersController",
     "Method": "CreateUser",
     "RelativePath": "api/Users/CreateUser",
@@ -45,44 +271,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "FirstName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "LastName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Password",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SaltedPassword",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Document",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      },
-      {
-        "Name": "IdRole",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "createUserDTO",
+        "Type": "PostaAPI.DTOs.Users.CreateUserDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -96,9 +287,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "deleteDTO",
+        "Type": "PostaAPI.DTOs.DeleteDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -153,6 +344,21 @@
       },
       {
         "Name": "IdRole",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Prefix",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdCountry",
         "Type": "System.Int32",
         "IsRequired": false
       }

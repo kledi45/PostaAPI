@@ -1,5 +1,9 @@
 ﻿using AutoMapper;
 using PostaAPI.Classes;
+using PostaAPI.DTOs.Cities;
+using PostaAPI.DTOs.Countries;
+using PostaAPI.DTOs.Roles;
+using PostaAPI.DTOs.Shipments;
 using PostaAPI.DTOs.Users;
 
 namespace PostaAPI.Profiles
@@ -14,46 +18,38 @@ namespace PostaAPI.Profiles
             CreateMap<EditUserDTO, Users>().ReverseMap();
             CreateMap<UsersListDTO, Users>().ReverseMap()
                .ForMember(x => x.ProfileImagePath, opt => opt.MapFrom(src => _apiUrl + src.ProfileImagePath))
-               .ForMember(x => x.Role, opt => opt.MapFrom(src => src.IdRoleNavigation.Title));
+               .ForMember(x => x.Role, opt => opt.MapFrom(src => src.IdRoleNavigation.Title))
+               .ForMember(x => x.Country, opt => opt.MapFrom(src => src.IdCountryNavigation.Name));
 
             #endregion
 
-            //#region roles profile mappers
-            //CreateMap<CreateRolesDTO, Roles>().ReverseMap();
-            //CreateMap<EditRolesDTO, Roles>().ReverseMap();
-            //CreateMap<RolesListDTO, Roles>().ReverseMap();
-            //#endregion
+            #region countries profile mappers
+            CreateMap<CreateCountryDTO, Countries>().ReverseMap();
+            CreateMap<EditCountryDTO, Countries>().ReverseMap();
+            CreateMap<CountryListDTO, Countries>().ReverseMap();
+            #endregion
+            #region roles profile mappers
+            CreateMap<CreateRoleDTO, Roles>().ReverseMap();
+            CreateMap<EditRoleDTO, Roles>().ReverseMap();
+            CreateMap<RolesListDTO, Roles>().ReverseMap();
+            #endregion
 
-    //        #region client requests
-    //        CreateMap<CreateClientRequestDTO, ClientRequests>().ReverseMap();
-    //        CreateMap<EditClientRequestDTO, ClientRequests>().ReverseMap();
-    //        CreateMap<ClientRequestsListDTO, ClientRequests>().ReverseMap()
-    //        .ForMember(dest => dest.UserDelegatedTo, opt => opt.MapFrom(src => src.ClientRequestDelegations != null
-    //                ? string.Join(", ", src.ClientRequestDelegations.Select(d => d.IdUserDelegatedToNavigation.FirstName + " " + d.IdUserDelegatedToNavigation.LastName)) 
-    //                : string.Empty))
-    //         .ForMember(dest => dest.IdUserDelegatedTo, opt => opt.MapFrom(src => src.ClientRequestDelegations != null ? 
-    //         src.ClientRequestDelegations.Select(d => d.UserId).ToList() : new List<int>()))
-    //        .ForMember(dest => dest.DateOfReceipt, opt => opt.MapFrom(src => src.EntryDate))
-    //        .ForMember(x => x.HasDamageRecordings, opt => opt.MapFrom(src => src.DamageRecordings.Any(x => !x.IsDeleted)));
-    //        #endregion
+            #region cities profile mappers 
+            CreateMap<CreateCityDTO, Cities>().ReverseMap();
+            CreateMap<EditCityDTO, Cities>().ReverseMap();
+            CreateMap<CitiesListDTO, Cities>().ReverseMap()
+                .ForMember(x => x.Country, opt => opt.MapFrom(x => x.IdCountryNavigation.Name));
 
-    //        #region isolation drying 
-    //        CreateMap<CreateIsolationDryingDTO, IsolationDrying>().ReverseMap();
-    //        CreateMap<EditIsolationDryingDTO, IsolationDrying>().ReverseMap();
-    //        CreateMap<IsolationDryingListDTO, IsolationDrying>().ReverseMap();
-    //        #endregion
-    //        #region damage recordings
-    //        CreateMap<CreateDamageRecordingDTO, DamageRecordings>().ReverseMap();
-    //        CreateMap<EditDamageRecordingDTO, DamageRecordings>().ReverseMap();
-    //        CreateMap<DamageRecordingsListDTO, DamageRecordings>().ReverseMap()
-    //            .ForMember(x => x.User, opt => opt.MapFrom(x => x.IdUserNavigation.FirstName + " " + x.IdUserNavigation.LastName))
-    //            .ForMember(x => x.LGKey, opt => opt.MapFrom(x => x.IdLGKeyNavigation.Name))
-    //       .ForMember(x => x.Devices, opt => opt.MapFrom(x =>
-    //string.Join(", ", x.DamageRecordingsDevices
-    //    .Where(d => d.IdDeviceNavigation != null) // Ensure IdDeviceNavigation is not null
-    //    .Select(d => d.IdDeviceNavigation.Name)))) 
-    //            .ForMember(x => x.IdDevices, opt => opt.MapFrom(x => x.DamageRecordingsDevices.Select(x => x.IDDevice)));
-    //        #endregion
+            #endregion
+
+            #region shipments profile mapper
+            CreateMap<CreateShipmentDTO, Shipments>().ReverseMap();
+            CreateMap<EditShipmentDTO, Shipments>().ReverseMap();
+            CreateMap<ShipmentsListDTO, Shipments>().ReverseMap()
+                .ForMember(x => x.City, opt => opt.MapFrom(x => x.IdCityNavigation.Name))
+                .ForMember(x => x.Country, opt => opt.MapFrom(x => x.IdCountryNavigation.Name))
+                .ForMember(x => x.Client, opt => opt.MapFrom(x => x.IdUserNavigation.FirstName + " " + x.IdUserNavigation.LastName));
+            #endregion
         }
     }
 }

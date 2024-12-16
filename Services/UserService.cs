@@ -7,7 +7,6 @@ using PostaAPI.Enums;
 using PostaAPI.GenericRepository;
 using PostaAPI.Helpers;
 using PostaAPI.Interfaces;
-using PostaAPI.Helpers;
 
 namespace PostaAPI.Services
 {
@@ -79,7 +78,9 @@ namespace PostaAPI.Services
                 user.LastName = editUserDTO.LastName;
                 user.UserName = editUserDTO.UserName;
                 user.Email = editUserDTO.Email;
-
+                user.Prefix = editUserDTO.Prefix;
+                user.PhoneNumber = editUserDTO.PhoneNumber;
+                user.IdCountry = editUserDTO.IdCountry;
                 if (!string.IsNullOrEmpty(editUserDTO.Password))
                 {
                     user.Password = HashPassword(editUserDTO.Password);
@@ -103,8 +104,8 @@ namespace PostaAPI.Services
         {
             try
             {
-                var users = _usersRepository.FindByCriteria(_ => !_.IsDeleted, _ => _.IdRoleNavigation);
-                return new ApiResponse<IEnumerable<UsersListDTO>>((int)PublicResultStatusCodes.Done, _mapper.Map<IList<UsersListDTO>>(users));
+                var users = await _usersRepository.FindByCriteriaAsync(_ => !_.IsDeleted, new string[] { "IdRoleNavigation", "IdCountryNavigation" });
+                return new ApiResponse<IEnumerable<UsersListDTO>>((int)PublicResultStatusCodes.Done, _mapper.Map<IList<UsersListDTO>>(users.OrderByDescending(_ => _.Id)));
             }
             catch (Exception)
             {

@@ -138,3 +138,4 @@ C:\Users\kledi\OneDrive\Desktop\postaapi\PostaAPI\PostaAPI\obj\Debug\net8.0\Post
 C:\Users\kledi\OneDrive\Desktop\postaapi\PostaAPI\PostaAPI\obj\Debug\net8.0\PostaAPI.genruntimeconfig.cache
 C:\Users\kledi\OneDrive\Desktop\postaapi\PostaAPI\PostaAPI\obj\Debug\net8.0\ref\PostaAPI.dll
 C:\Users\kledi\OneDrive\Desktop\postaapi\PostaAPI\PostaAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kledi\OneDrive\Desktop\postaapi\PostaAPI\PostaAPI\obj\Debug\net8.0\PostaAPI.sourcelink.json

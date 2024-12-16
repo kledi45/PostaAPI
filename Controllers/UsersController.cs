@@ -16,13 +16,13 @@ namespace PostaAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromForm] CreateUserDTO createUserDTO) => Ok(await _userService.CreateUser(createUserDTO));
+        public async Task<IActionResult> CreateUser([FromBody] CreateUserDTO createUserDTO) => Ok(await _userService.CreateUser(createUserDTO));
         [HttpGet]
         public async Task<IActionResult> GetUsers() => Ok(await _userService.GetUsers());
         [HttpPost]
-        public async Task<IActionResult> EditUser([FromForm] EditUserDTO editUserDTO) => Ok(await _userService.EditUser(editUserDTO));
+        public async Task<IActionResult> EditUser(EditUserDTO editUserDTO) => Ok(await _userService.EditUser(editUserDTO));
         [HttpPost]
-        public async Task<IActionResult> DeleteUser([FromForm] DeleteDTO deleteDTO) => Ok(await _userService.DeleteUser(deleteDTO));
+        public async Task<IActionResult> DeleteUser(DeleteDTO deleteDTO) => Ok(await _userService.DeleteUser(deleteDTO));
 
     }
 }

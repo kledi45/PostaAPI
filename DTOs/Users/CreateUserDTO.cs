@@ -24,5 +24,8 @@ namespace PostaAPI.DTOs.Users
         public string? SaltedPassword { get; set; }
         public IFormFile? Document { get; set; }
         public int IdRole { get; set; }
+        public int Prefix { get; set; }
+        public long PhoneNumber { get; set; }
+        public int IdCountry { get; set; }
     }
 }

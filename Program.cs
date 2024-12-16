@@ -22,6 +22,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<ICountriesService, CountriesService>();
+builder.Services.AddScoped<IRolesService, RolesService>();
+builder.Services.AddScoped<ICitiesService, CitiesService>();
+builder.Services.AddScoped<IShipmentsService, ShipmentsService>();
+
 
 
 builder.Services.AddSwaggerGen(c =>
@@ -63,11 +68,12 @@ builder.Services.AddCors(options =>
         });
 });
 
-builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddScoped<LoggedUserHelper>();
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddAutoMapper(typeof(AutoMapping));
+
 
 
 builder.Services.AddSession(options =>
